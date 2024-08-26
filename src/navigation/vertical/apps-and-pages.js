@@ -6,6 +6,13 @@ export default [
     icon: { icon: 'tabler-calendar' },
   },
   {
+    title: 'Arena İşlemleri',
+    icon: { icon: 'tabler-school' },
+    children: [
+      { title: 'Katılım Listesi', to: 'apps-academy-dashboard' },
+    ],
+  },
+  {
     title: 'Academy',
     icon: { icon: 'tabler-school' },
     children: [

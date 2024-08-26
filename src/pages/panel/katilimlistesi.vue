@@ -19,13 +19,12 @@ const searchTerms = ref({
 });
 const headers = [
     { title: "Kullanıcı", key: "username" },
-    { title: "Lig", key: "league" },
-    { title: "Takımlar", key: "teams" },
+    { title: "Seviye", key: "experience" },
+    { title: "Boost Sayısı", key: "type" },
     { title: "Oyun", key: "game" },
     { title: "Yorum", key: "comment" },
     { title: "Oran", key: "odd_val" },
     { title: "Durum", key: "status" },
-    { title: "Görüntülenme", key: "view" },
     { title: "Oluşturulma Tarihi", key: "created_date" },
 ];
 
@@ -91,8 +90,8 @@ onMounted(() => {
 
 <template>
     <div>
-        <VCard class="mb-6" title="Tüm Analizler">
-            <VCardText>Kullanıcılar tarafından yapılan analizlerini ve durumlarını gösterir.</VCardText>
+        <VCard class="mb-6" title="Katılım Listesi">
+            <VCardText>Boost katılımı sağlayan kullanıcıların listesini gösterir.</VCardText>
         </VCard>
 
         <v-data-table-server :items="items" :headers="headers" :items-length="totalItems" :items-per-page="itemsPerPage"
