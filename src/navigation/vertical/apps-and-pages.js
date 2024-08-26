@@ -9,7 +9,9 @@ export default [
     title: 'Arena İşlemleri',
     icon: { icon: 'tabler-school' },
     children: [
-      { title: 'Katılım Listesi', to: 'apps-academy-dashboard' },
+      { title: 'Katılım Listesi', to: 'panel-katilimlistesi'},
+      { title: 'Boost İşlemleri', to: 'panel-boostislemleri' },
+      { title: 'Tiwy İşlemleri', to: 'panel-tiwyislemleri' },
     ],
   },
   {
