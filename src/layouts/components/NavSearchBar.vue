@@ -1,7 +1,7 @@
 <script setup>
-import Shepherd from 'shepherd.js'
-import { withQuery } from 'ufo'
-import { useConfigStore } from '@core/stores/config'
+import { useConfigStore } from '@core/stores/config';
+import Shepherd from 'shepherd.js';
+import { withQuery } from 'ufo';
 
 defineOptions({
   // 👉 Is App Search Bar Visible
@@ -188,7 +188,7 @@ const LazyAppBarSearch = defineAsyncComponent(() => import('@core/components/App
       class="d-none d-md-flex align-center text-disabled ms-2"
       @click="Shepherd.activeTour?.cancel()"
     >
-      <span class="me-2">Search</span>
+      <span class="me-2">Ara</span>
       <span class="meta-key">&#8984;K</span>
     </span>
   </div>

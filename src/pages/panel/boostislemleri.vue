@@ -1,5 +1,6 @@
 <script setup>
 import { $api } from '@/utils/api';
+import fetch from 'node-fetch'; // Add this import at the top of the file
 import { onMounted, ref, watch } from 'vue';
 
 const items = ref([])
@@ -47,7 +48,21 @@ const fetchData = async ({ page, itemsPerPage, searchTerms, filter }) => {
 
     const filterQuery = `filter=[${filters.join(',')}]`
 
-    const { data, totalCount } = await $api(`/system/v1/boosts?take=${take}&skip=${skip}&${filterQuery}`)
+    const url = `http://127.0.0.1:8011/api/system/v1/comments/?take=${take}&skip=${skip}&${filterQuery}`
+
+    const response = await fetch(url, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        // Add any necessary authentication headers here
+      },
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    const { data, totalCount } = await response.json();
 
     items.value = data.map(boost => ({
       id: boost.id,

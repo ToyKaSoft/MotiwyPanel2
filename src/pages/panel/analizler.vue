@@ -37,8 +37,8 @@ const statusOptions = [
     { text: 'Bekliyor', value: '0' }
 ];
 
-const bearerToken = 'c11ca19b9a2de7f7990d55ef8a8c765967e498e45cd45a879b1e93d7becb9493';
-const apiUrl = 'https://server.motiwy.com/api/system/v1/comments/';
+const bearerToken = '23bb3f1da1b689d76800bd3f54f373b9fabe67adb72dcedd7895c46ecce7ca2f';
+const apiUrl = 'http://127.0.0.1:8011/api/system/v1/comments/';
 
 const fetchData = async ({ page, itemsPerPage, searchTerms }) => {
     try {
